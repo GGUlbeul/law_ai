@@ -95,9 +95,12 @@ retriever_precedent = vectorstors_precedent.as_retriever(search_type="similarity
 """#gpt합치기 (법률 서비스, 판례 서비스)찾기
 
 """
-
+from dotenv import load_dotenv
 import os
-os.environ['OPENAI_API_KEY'] = ''
+
+load_dotenv()  # .env 파일을 로드
+
+os.environ['OPENAI_API_KEY'] = os.getenv("API_KEY")
 
 
 from langchain_openai import ChatOpenAI
