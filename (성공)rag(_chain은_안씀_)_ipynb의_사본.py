@@ -42,7 +42,7 @@ from datasets import load_dataset
 
 from huggingface_hub import login
 import pandas as pd
-login("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")
+login(os.get_env("hug_API_KEY"))
 
 from huggingface_hub import hf_hub_download
 import os
@@ -70,7 +70,7 @@ retriever_1 = vectorstors_1.as_retriever(search_type="similarity", search_kwargs
 
 from huggingface_hub import login
 import pandas as pd
-login("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")
+
 
 from huggingface_hub import hf_hub_download
 import os
